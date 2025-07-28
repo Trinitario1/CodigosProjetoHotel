@@ -1,4 +1,4 @@
-def anoBissexto(ano):
+def anoBissexto(data):
     ano = int(data[6:])
     if ano % 4 == 0:
         if ano % 100 == 0 and ano % 400 != 0:
@@ -9,7 +9,7 @@ def anoBissexto(ano):
         return False
 
 def validarData(data):
-    if data[2] or data[5] != '-':
+    if data[2] != '-' or data[5] != '-':
         return True
     if len(data) == 10:
         mes = int(data[3:5])
